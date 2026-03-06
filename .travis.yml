@@ -12,4 +12,4 @@ script:
   - flake8 .
   - coverage run --source='.' manage.py test
   - coverage report
-  - coveralls --service_name=travis-pro
+  - coveralls
