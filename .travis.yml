@@ -7,6 +7,10 @@ install:
   - pip install -r requirements.txt
   - pip install black flake8 coverage coveralls python-dotenv
 
+env:
+  global:
+    - COVERALLS_SERVICE_NAME=travis-pro
+
 script:
   - black --check .
   - flake8 .
