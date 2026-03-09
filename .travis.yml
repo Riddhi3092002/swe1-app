@@ -17,3 +17,13 @@ script:
   - coverage run --source='.' manage.py test
   - coverage report
   - coveralls
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-west-2
+  app: djangotutorial
+  env: djangotutorial-env
+  bucket_name: elasticbeanstalk-us-west-2-557270420035
+  edge: true
+  on:
+    branch: main
